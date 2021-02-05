@@ -1,0 +1,42 @@
+/** FORM **/
+
+.form_element {
+
+    &[type=text],
+    &[type=password],
+    &[type=number],
+    &[type=time],
+    &[type=date] {
+        border: 2px solid $color-secondary;
+        padding: .30rem .50rem;
+        transition: $transition-default;
+        display: block;
+        margin-bottom: 1rem;
+        width: 100%;
+
+        :nth-last-child(1) {
+            margin-bottom: 0rem;
+        }
+
+        &:focus {
+            border: 2px solid $color-primary;
+        }
+    }
+}
+
+select.form_element {
+    border: 2px solid $color-secondary;
+    padding: .30rem .50rem;
+    transition: $transition-default;
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    :nth-last-child(1) {
+        margin-bottom: 0rem;
+    }
+
+    &:focus {
+        border: 2px solid $color-primary;
+    }
+}

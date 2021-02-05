@@ -1,0 +1,110 @@
+$b:.5;
+
+@for $a from 1 through 5 {
+    .my_#{$a} {
+        margin-top: #{$b}rem;
+        margin-bottom: #{$b}rem;
+    }
+
+    .mx_#{$a} {
+        margin-left: #{$b}rem;
+        margin-right: #{$b}rem;
+    }
+
+    .mt_#{$a} {
+        margin-top: #{$b}rem;
+    }
+
+    .mb_#{$a} {
+        margin-bottom: #{$b}rem;
+    }
+
+    .ml_#{$a} {
+        margin-left: #{$b}rem;
+    }
+
+    .mr_#{$a} {
+        margin-right: #{$b}rem;
+    }
+
+    .py_#{$a} {
+        margin-top: #{$b}rem;
+        margin-bottom: #{$b}rem;
+    }
+
+    .px_#{$a} {
+        margin-left: #{$b}rem;
+        margin-right: #{$b}rem;
+    }
+
+    .pt_#{$a} {
+        margin-top: #{$b}rem;
+    }
+
+    .pb_#{$a} {
+        margin-bottom: #{$b}rem;
+    }
+
+    .pl_#{$a} {
+        margin-left: #{$b}rem;
+    }
+
+    .pr_#{$a} {
+        margin-right: #{$b}rem;
+    }
+
+    $b:$b+.5;
+}
+
+.d {
+    &_flex {
+        display: flex;
+    }
+
+    &_block {
+        display: block;
+    }
+
+    &_inline_block {
+        display: inline-block;
+    }
+}
+
+.justify_content {
+    &_center {
+        justify-content: center;
+    }
+
+    &_between {
+        justify-content: space-between;
+    }
+
+    &_arround {
+        justify-content: space-around;
+    }
+}
+
+.align_items {
+    &_center {
+        align-items: center;
+    }
+}
+
+.w {
+    &_25 {
+        width: 25%;
+    }
+
+    &_50 {
+        width: 50%;
+    }
+
+    &_75 {
+        width: 75%;
+    }
+
+    &_100 {
+        width: 100%;
+    }
+
+}

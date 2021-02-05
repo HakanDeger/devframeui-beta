@@ -1,0 +1,73 @@
+@import 'mixins';
+
+$grid__bp-sm: 576;
+$grid__bp-md: 768;
+$grid__bp-lg: 992;
+$grid__bp-xl: 1200;
+$grid__cols: 12;
+
+$map-grid-props: ('': 0,
+    '_sm': $grid__bp-sm,
+    '_md': $grid__bp-md,
+    '_lg': $grid__bp-lg,
+    '_xl': $grid__bp-xl);
+
+@mixin create-mq($breakpoint) {
+    @if($breakpoint==0) {
+        @content;
+    }
+
+    @else {
+        @media screen and (min-width: $breakpoint *1px) {
+            @content;
+        }
+    }
+}
+
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
+    @include create-mq($breakpoint) {
+        @for $i from 1 through $grid-cols {
+            .col#{$modifier}_#{$i} {
+                flex-basis: (100 / ($grid-cols / $i)) * 1%;
+            }
+        }
+    }
+}
+
+.container {
+    margin: 0 auto;
+
+    @include media(small) {
+        max-width: $grid__bp-sm * 1px;
+    }
+
+    @include media(medium) {
+        max-width: $grid__bp-md * 1px;
+    }
+
+    @include media(large) {
+        max-width: $grid__bp-lg * 1px;
+    }
+
+    @include media(xlarge) {
+        max-width: $grid__bp-xl * 1px;
+    }
+
+    &--fluid {
+        margin: 0 auto;
+        max-width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+@each $modifier,
+$breakpoint in $map-grid-props {
+    @include create-col-classes($modifier, $grid__cols, $breakpoint);
+}

@@ -1,0 +1,37 @@
+{
+  "name": "devframeui-beta",
+  "version": "1.0.1",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "devframeui",
+    "frontend",
+    "framework",
+    "scss",
+    "css",
+    "js",
+    "gulp.js"
+  ],
+  "author": "Hakan Deger",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "run-sequence": "^2.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HakanDeger/DevFrameUI.git"
+  }
+}

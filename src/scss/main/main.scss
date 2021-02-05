@@ -1,0 +1,36 @@
+@import 'variables';
+
+.container{
+    max-width: 1750px;
+    width: 100%;
+}
+.top_header{
+    line-height: 2.5rem;
+}
+.brand_logo{
+    img{
+        width: auto;
+        height: 60px;
+    }
+}
+.searchbar {
+    position: relative;
+    input {
+        width: 30vw;
+        border: none;
+        outline: none;
+        padding: 1rem;
+        outline: 1px solid rgba($color: #f47b22, $alpha: .3)
+    }
+
+    a {
+        display: flex;
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        right: 8px;
+        outline: none;
+        border: none;
+        
+    }
+}

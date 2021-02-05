@@ -1,0 +1,26 @@
+/** THEME **/
+body{
+    background-color:$color-white;
+}
+.bg{
+    &--light{
+        background:$color-white;
+        a{
+            color: $color-secondary;
+            &:hover{
+                color: $color-primary;
+            }
+        }
+        @extend .text--dark;
+    }
+    &--dark{
+        background:$color-secondary;
+        a{
+            color: $color-white;
+            &:hover{
+                color: $color-primary;
+            }
+        }
+        @extend .text--light;
+    }
+}

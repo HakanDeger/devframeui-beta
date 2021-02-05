@@ -1,0 +1,25 @@
+/** MIXINS **/
+
+@mixin media ($screensize) {
+
+    @if ($screensize == xlarge) {
+        @media only screen and (min-width: 1200px) { @content };
+    }
+
+    @if ($screensize == large) {
+        @media only screen and (min-width: 992px) { @content };
+    }
+
+    @if ($screensize == medium) {
+        @media only screen and (min-width: 768px) { @content };
+    }
+
+    @if ($screensize == small) {
+        @media only screen and (min-width: 576px) { @content };
+    }
+}
+@mixin flex-display($display, $align-items, $justify-content) {
+    display: $display;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}

@@ -1,0 +1,41 @@
+/** TABLES **/
+.table--responsive {
+    @media(max-width: 996px){
+        overflow-x: auto;
+    }
+}
+.table {
+    width: 100%;
+    color: $color-secondary;
+
+    td,th {
+        padding: .70rem 1.5rem;
+    }
+    thead {
+        font-weight: bold;
+        text-align: left;
+        background-color: lighten($color-secondary, 65%);
+    }
+    tbody {
+        background-color: #fff;
+    }
+
+    &--bordered {
+        td,th {
+            border: 2px solid lighten($color-secondary, 64%);
+        }
+    }
+
+    &--striped {
+
+        thead {
+            background-color: #fff;
+        }
+
+        tr {
+            &:nth-child(even) {
+                background-color: lighten($color-secondary, 65%);
+            }
+        }
+    }
+}

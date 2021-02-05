@@ -1,0 +1,58 @@
+/**NAVS**/
+.navbar{
+    &_nav{
+        display: flex;
+        
+        .nav_item{
+            margin: 0 5px 0 5px;
+            padding: .5rem;
+            position: relative;
+            &:hover{
+                .nav_dropdown{
+                    display: block;
+                }
+            }
+            & .nav_dropdown{
+                display: none;
+                position: absolute;
+                background-color: $color-secondary;
+                white-space: nowrap;
+                top:100%;
+                & li{
+                    & .nav_dropdown_alt{
+                        display: none;
+                        position: absolute;
+                        background-color: $color-secondary;
+                        white-space: nowrap;
+                        left:100%;
+                        & li{
+                            display: flex;
+                            & a{
+                                padding: .5rem 1.5rem .5rem 1.5rem;
+                            }
+                        }
+                        
+                        &:hover{
+                            & a{
+                                color: $color-primary;
+                            }
+                        }
+                    }
+                    display: flex;
+                    & a{
+                        padding: .5rem 1.5rem .5rem 1.5rem;
+                    }
+                    &:hover{
+                        background: darken($color: $color-white, $amount: 60%);
+                        & a{
+                            color: $color-primary;
+                        }
+                        & .nav_dropdown_alt{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
